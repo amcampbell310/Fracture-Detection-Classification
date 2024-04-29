@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fracture Detection</title>
+</head>
+<body>
+    <h1>Fracture Detection</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <input type="submit" value="Upload Image">
+    </form>
+    {% if prediction %}
+        <p>Prediction: {{ prediction }}</p>
+        <p>Prediction Probability: {{ prediction_probability }}</p>
+        <img src="data:image/jpeg;base64,{{ img_base64 }}" alt="Uploaded Image">
+    {% endif %}
+</body>
+</html>

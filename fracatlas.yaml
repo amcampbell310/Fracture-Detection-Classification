@@ -1,0 +1,7 @@
+# fracatlas.yaml
+train: train\\images  # Adjust path as needed
+val: val\\images  # Adjust path as needed
+test: test\\images  # Adjust path as needed
+
+nc: 1  # Number of classes
+names: ['fractured']  # Class names
